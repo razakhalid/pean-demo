@@ -3,6 +3,7 @@ import { Task } from "../../shared/task";
 import {remult} from "remult";
 import {NgFor} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {TasksController} from "../../shared/tasks.controller";
 
 @Component({
   selector: 'app-todo',
@@ -47,5 +48,8 @@ export class TodoComponent {
         completed: undefined
       }
     }).then(tasks => this.tasks = tasks);
+  }
+  async setAllCompleted(completed: boolean) {
+    await TasksController.setAllCompleted(completed);
   }
 }
