@@ -21,7 +21,12 @@
   },
   {
     "title": "Do laundry",
-    "completed": false,
+    "completed": true,
     "id": 5
+  },
+  {
+    "title": "laundry",
+    "completed": false,
+    "id": 6
   }
 ]
